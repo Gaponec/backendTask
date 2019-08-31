@@ -1,5 +1,5 @@
 **Usage:**
 
 `mvn package`</br>
-`cd target`
+`cd target`</br>
 `java -jar [application].jar [path to source file] [path to target file]`
