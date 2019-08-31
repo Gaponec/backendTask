@@ -31,13 +31,13 @@ public class HtmlElementService implements ElementService {
 		StringBuilder stringBuilder = new StringBuilder();
 		for (Element parent : element.parents()) {
 			stringBuilder.insert(0, ">");
-			if(parent.elementSiblingIndex() > 1) {
+			if(parent.siblingElements().size() > 0) {
 				stringBuilder.insert(0,"[" + parent.elementSiblingIndex() + "]");
 			}
 			stringBuilder.insert(0, parent.nodeName());
 		}
 		stringBuilder.append(element.nodeName());
-		if(element.elementSiblingIndex() > 1) {
+		if(element.siblingElements().size() > 0) {
 			stringBuilder.append('[');
 			stringBuilder.append(element.elementSiblingIndex());
 			stringBuilder.append(']');
